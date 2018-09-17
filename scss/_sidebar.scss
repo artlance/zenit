@@ -1,0 +1,36 @@
+.no-js {
+    .page__sidebar {
+        position: absolute;
+    }
+}
+.page__sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 6062;
+    width: 80px;
+    height: 80px;
+}
+.cart__toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+}
+.cart__toggle__disabled {
+    cursor: default;
+}
+.cart_icon {
+    right: 24px;
+    top: 28px;
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 25px;
+    background-color: $tr;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNi4yNSAzMiI+PHRpdGxlPjwvdGl0bGU+PHBhdGggZmlsbD0iI2ZmZmZmZiIgZD0iTTM2IDExLjM5YTEgMSAwIDAgMC0uNzktLjM5SDMxTDI1IC41MWExIDEgMCAwIDAtMS4zNi0uMzggMSAxIDAgMCAwLS4zNyAxLjM2TDI4LjY2IDExSDcuNTlMMTMgMS40OWExIDEgMCAwIDAtLjM3LTEuMzYgMSAxIDAgMCAwLTEuMzYuMzhMNS4yOSAxMUgxYTEgMSAwIDAgMC0xIDEuMjNsNC41OCAxOWExIDEgMCAwIDAgMSAuNzdoMjQuNjdhMSAxIDAgMCAwIDEtLjc1bDUtMTlhMSAxIDAgMCAwLS4yNS0uODZ6TTI5LjQ4IDMwSDYuMzdsLTQuMS0xN0gzNHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 28px 25px;
+}

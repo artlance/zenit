@@ -1,0 +1,43 @@
+$footer: 100px;
+
+
+$fontSize: 16px;
+$lineHeight: 1.5;
+$spacer: 30px;                                                    $sp: $spacer;
+$fontFamily: 'PT Sans', Helvetica, Arial, sans-serif;             $ff: $fontFamily;
+$fontTitle: 'FuturaDemiC', Helvetica, Arial, sans-serif;          $ft: $fontTitle;
+
+
+$duration: 0.15s;                                                 $d: $duration;
+$function: cubic-bezier(0.4, 0.0, 0.2, 1);                        $f: $function;
+$function-reverse: cubic-bezier(0.2, 0.0, 0.4, 1);                $fr: $function-reverse;
+
+
+$primary: #009ee1;                                                $p: $primary;
+$secondary: #00aeef;                                              $s: $secondary;
+$tertiary: #e5f7fd;                                               $t: $tertiary;
+
+
+$text: #333333;                                                   $txt: $text;
+$link: #00aeef;                                                   $l: $link;
+$link-hover: #009ee1;                                             $lh: $link-hover;
+$focus: #93c0ee;                                                  $fo: $focus;
+$active: #e5f7fd;                                                 $ac: $active;
+
+
+$white: #ffffff;                                                  $w: $white;
+$black: #000000;                                                  $b: $black;
+$dark-gray: #333333;                                              $dgr: $dark-gray;
+$gray: #999999;                                                   $gr: $gray;
+$light-gray: #eceef3;                                             $lgr: $light-gray;
+$extra-light-gray: #f6f8fa;                                       $elgr: $extra-light-gray;
+$green: #00c100;                                                  $gn: $green;
+$red: #f90064;                                                    $r: $red;
+$transparent: transparent;                                        $tr: $transparent;
+
+
+$default: #f00;
+$success: #00c100;
+$info: #0079e8;
+$warning: #f0ad4e;
+$error: #f90064;
