@@ -184,6 +184,42 @@
         left: -24px;
         width: 24px;
     }
+    .gallery {
+        padding-top: 128px;
+        padding-bottom: 48px;
+    }
+    .gallery__photos {
+        margin-bottom: 30px;
+    }
+    .product__navigation {
+        text-align: center;
+    }
+    .product__header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product__title {
+        flex: 0 0 70%;
+        max-width: 70%;
+        padding-bottom: 19px;
+    }
+    .product__price {
+        flex: 0 0 30%;
+        max-width: 30%;
+        text-align: right;
+        padding-bottom: 19px;
+    }
+    .product__article {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .product__quantity__content {
+        padding-top: 0px;
+        margin-bottom: 58px;
+    }
+    .product__header {
+        padding-top: 41px;
+    }
 }
 @media only (min-width: 1200px) {
     #menu__modal {
@@ -528,6 +564,7 @@
         flex: 0 0 25%;
         max-width: 25%;
     }
+    .page__product,
     .page__catalog {
         .page__header {
             height: 100%;
@@ -679,6 +716,133 @@
     .catalog__menu__link {
         .textwrap {
             white-space: nowrap;
+        }
+    }
+    .page__product__columns {
+        margin-left: 120px;
+        margin-right: 120px;
+        display: flex;
+        min-height: 100vh;
+    }
+    .page__product__gallery {
+        flex: 0 0 42.85%;
+        max-width: 42.85%;
+    }
+    .page__product__content {
+        padding-top: 169px;
+        flex: 0 0 57.15%;
+        max-width: 57.15%;
+        padding-bottom: 150px;
+    }
+    .page__product {
+        .page__header {
+            background: $w !important;
+        }
+    }
+    .gallery {
+        padding-top: 240px;
+        padding-left: 24px;
+        max-width: 672px;
+        padding-right: 148px;
+        padding-bottom: 200px;
+    }
+    .gallery__photos {
+        margin-bottom: 48px;
+    }
+    .gallery__thumbs__link {
+        width: 88px;
+        height: 88px;
+        border-width: 4px;
+    }
+    .gallery__thumbs__item {
+        margin: 0 4px;
+    }
+    .page__product__inner {
+        max-width: 827px;
+        padding-left: 62px;
+        position: relative;
+    }
+    .product__title {
+        font-size: 48px;
+        line-height: 1.25;
+        flex: 0 0 70%;
+        max-width: 70%;
+        h1 {
+            margin-left: -3px;
+        }
+    }
+    .product__header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .product__article {
+        padding-top: 23px;
+        font-size: 18px;
+        text-align: right;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    .product__price {
+        padding-top: 1px;
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 100;
+        font-size: 30px;
+        padding-bottom: 44px;
+    }
+    .product__price__num {
+        display: inline-block;
+        font-size: 48px;
+    }
+    .product__description {
+        max-width: 620px;
+        margin-bottom: 52px;
+    }
+    .product__quantity,
+    .product__size {
+        display: flex;
+    }
+    .product__quantity__title,
+    .product__size__title {
+        flex: 0 0 155px;
+        max-width: 155px;
+        padding-top: 7px;
+    }
+    .product__quantity__title {
+        padding-top: 16px;
+    }
+    .product__quantity__content,
+    .product__size__content {
+        flex-grow: 1;
+        margin-bottom: 0;
+        padding-bottom: 17px;
+    }
+    .size__list {
+        max-width: 100%;
+    }
+    .product__navigation {
+        padding-top: 51px;
+    }
+    .size__list {
+        .radio {
+            label {
+                background-color: $tr;
+                &:hover {
+                    background-color: #eceef3;
+                }
+            }
+        }
+    }
+    .quantity__big {
+        .button__quantity__plus,
+        .button__quantity__minus {
+            background: $tr;
+            &:hover {
+                background: #eceef3;
+            }
+        }
+        .button__quantity__disabled {
+            background: $tr !important;
         }
     }
 }

@@ -195,6 +195,7 @@ button.button {
         padding-bottom: 24px;
     }
 }
+.product__close,
 .header__close__icon,
 .feedback__close,
 .modal__close {
@@ -229,6 +230,10 @@ button.button {
 .feedback__close {
     top: 56px;
     right: 56px;
+}
+.product__close {
+    top: -115px;
+    right: -10px;
 }
 .header__close__icon {
     right: 22px;

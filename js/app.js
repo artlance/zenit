@@ -142,7 +142,41 @@ document.addEventListener('DOMContentLoaded', function() {
         cartGoThird[i].addEventListener('click', preventDefaultListener);
     }
 
+    //tabs
+    let myTabs = document.querySelectorAll('.gallery__thumbs__item');
+    function myTabClicks(tabClickEvent) {
+        for (let i = 0; i < myTabs.length; i++) {
+            classie.remove(myTabs[i], 'active');
+        }
+        let clickedTab = tabClickEvent.currentTarget;
+        classie.add(clickedTab, 'active');
+        tabClickEvent.preventDefault();
+        let myContentPanes = document.querySelectorAll('.gallery__photo');
+        for (let i = 0; i < myContentPanes.length; i++) {
+            classie.remove(myContentPanes[i], 'active');
+        }
+        let anchorReference = tabClickEvent.target;
+        let activePaneId = anchorReference.getAttribute('href');
+        let activePane = document.querySelector(activePaneId);
+        classie.add(activePane, 'active');
+    }
+    for (let i = 0; i < myTabs.length; i++) {
+        myTabs[i].addEventListener('click', myTabClicks)
+    }
 
+    //readmore
+    let wordsNum = 9;
+    let docWidth = document.body.clientWidth;
+    if (docWidth > 1199) {
+        wordsNum = 99999;
+    }
+    $readMoreJS.init({
+        target: '.product__description p',
+        numOfWords: wordsNum,
+        toggle: true,
+        moreLink: 'Подробнее',
+        lessLink: 'Скрыть'
+    });
 
 }); //DOMContentLoaded
 

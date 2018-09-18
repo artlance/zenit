@@ -12,6 +12,32 @@
 .page__header__blue {
     background: $s;
 }
+.page__header__gray {
+    background-color: #f6f8fa;
+    .logo__white {
+        opacity: 0;
+    }
+    .logo__blue {
+        opacity: 1;
+    }
+    .header__close__icon {
+        right: auto;
+        left: 22px;
+        top: 32px;
+        &:before {
+            width: 2px;
+            border-radius: 1px;
+        }
+        &:after {
+            height: 2px;
+            border-radius: 1px;
+        }
+        &:before,
+        &:after {
+            background-color: #333;
+        }
+    }
+}
 .no-js {
     .page__header {
         position: absolute;
@@ -20,6 +46,9 @@
 .page_header_fixed {
     .page__header {
         background-color: $s;
+    }
+    .page__header__gray {
+        background-color: #f6f8fa;
     }
 }
 .header__toggle {
