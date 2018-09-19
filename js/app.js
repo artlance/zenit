@@ -178,6 +178,24 @@ document.addEventListener('DOMContentLoaded', function() {
         lessLink: 'Скрыть'
     });
 
+    //mask
+    let maskPhone = document.querySelectorAll('.input__tel');
+    for (let i = 0; i < maskPhone.length; i++) {
+        VMasker(maskPhone[i]).maskPattern('+9 (999) 999-99-99');
+    }
+
 }); //DOMContentLoaded
+
+window.addEventListener('load', function () {
+
+    //catalog
+    let catalogNavigation = document.getElementsByClassName('catalog__navigation')[0],
+        catalogNavigationOffset = catalogNavigation.getBoundingClientRect().left,
+        catalogActive = document.getElementsByClassName('catalog__menu__active')[0],
+        catalogActiveOffset = catalogActive.getBoundingClientRect().left;
+    let catalogNavigationScroll = parseInt(catalogActiveOffset) + parseInt(catalogNavigationOffset) - 17;
+    catalogNavigation.scrollTo({ left: catalogNavigationScroll, behavior: 'smooth'});
+
+}, false);
 
 

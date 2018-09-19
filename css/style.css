@@ -840,6 +840,10 @@ button.button {
   -webkit-overflow-scrolling: touch;
 }
 
+.modal__menu__wrap {
+  padding-top: 80px;
+}
+
 .dialog__content__full {
   background: #00aeef;
   position: absolute;
