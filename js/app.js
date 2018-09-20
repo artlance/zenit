@@ -184,17 +184,66 @@ document.addEventListener('DOMContentLoaded', function() {
         VMasker(maskPhone[i]).maskPattern('+9 (999) 999-99-99');
     }
 
+    //countdown
+    let clock = document.getElementById('clock');
+    if (clock) {
+        const getRemainingTime = deadline => {
+            let now = new Date(),
+                remainTime = (new Date(deadline) - now + 1000) / 1000,
+                remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+                remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+                remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+                remainDays = Math.floor(remainTime / (3600 * 24));
+
+            return {
+                remainSeconds,
+                remainMinutes,
+                remainHours,
+                remainDays,
+                remainTime
+            }
+        };
+        const countdown = (deadline, elem) => {
+            const el = document.getElementById(elem);
+            const timerUpdate = setInterval(() => {
+                let t = getRemainingTime(deadline);
+                el.innerHTML = `${t.remainHours} : ${t.remainMinutes} : ${t.remainSeconds}`;
+
+                if (t.remainTime <= 1) {
+                    clearInterval(timerUpdate);
+                    classie.add(document.getElementsByClassName('page__status')[0], 'page__status__disabled');
+                }
+                classie.remove(document.getElementsByClassName('page__status')[0], 'page__status__none');
+
+            }, 100)
+        };
+        countdown('Sep 21 2018 23:26:40 GMT+0300', 'clock');
+    }
+
+    //order
+    let orderToggle = document.getElementById('order__toggle');
+    if (orderToggle) {
+        function orderShow() {
+            classie.toggle(document.getElementsByClassName('order__panel__wrapper')[0], 'order__panel__open');
+        }
+        orderToggle.addEventListener('click', orderShow);
+        orderToggle.addEventListener('click', preventDefaultListener);
+    }
+
+
 }); //DOMContentLoaded
 
 window.addEventListener('load', function () {
 
     //catalog
-    let catalogNavigation = document.getElementsByClassName('catalog__navigation')[0],
-        catalogNavigationOffset = catalogNavigation.getBoundingClientRect().left,
-        catalogActive = document.getElementsByClassName('catalog__menu__active')[0],
-        catalogActiveOffset = catalogActive.getBoundingClientRect().left;
-    let catalogNavigationScroll = parseInt(catalogActiveOffset) + parseInt(catalogNavigationOffset) - 17;
-    catalogNavigation.scrollTo({ left: catalogNavigationScroll, behavior: 'smooth'});
+    let catalogNavigation = document.getElementsByClassName('catalog__navigation')[0];
+    if (catalogNavigation) {
+        let catalogNavigationOffset = catalogNavigation.getBoundingClientRect().left,
+            catalogActive = document.getElementsByClassName('catalog__menu__active')[0],
+            catalogActiveOffset = catalogActive.getBoundingClientRect().left;
+        let catalogNavigationScroll = parseInt(catalogActiveOffset) + parseInt(catalogNavigationOffset) - 17;
+        catalogNavigation.scrollTo({ left: catalogNavigationScroll, behavior: 'smooth'});
+    }
 
 }, false);
 
