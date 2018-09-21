@@ -134,7 +134,7 @@
         <!-- /.status -->
         <header class="header page__header page__header__blue">
             <div class="container">
-                <a href="menu.html" class="header__toggle">
+                <a href="menu.html" class="header__toggle" id="header__toggle">
                     <span class="header__toggle__icon">
                         <span class="header__toggle__line header__toggle__line1"></span>
                         <span class="header__toggle__line header__toggle__line2"></span>
@@ -158,6 +158,41 @@
         </aside>
     </div>
     <!-- /.page -->
+    <div id="menu__modal" class="dialog">
+        <div class="dialog__overlay"></div>
+        <div class="dialog__content dialog__content__full">
+            <button data-dialog-close class="modal__close hidden">Close</button>
+            <div class="modal__menu__note">
+                <p>На&nbsp;сайте магазина легко выбрать и&nbsp;заказать форму команды, повседневную одежду, аксессуары и&nbsp;сувениры с&nbsp;символикой &laquo;сине-бело-голубых&raquo;.</p>
+            </div>
+            <ul class="modal__menu">
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Футболки</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Сувениры</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Флаги</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Шарфы</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Игрушки</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="catalog.html"><span class="modal_menu__arrow"></span>Фан-шапки</a>
+                </li>
+                <li class="modal__menu__item">
+                    <a class="modal__menu__link" href="status.html">Статус заказа</a>
+                </li>
+            </ul>
+            <!-- /.modal_menu -->
+        </div>
+        <!-- /.dialog__content -->
+    </div>
+    <!-- /#menu__modal -->
     <script src="js/modernizr.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/dialog.js"></script>
