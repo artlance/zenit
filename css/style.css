@@ -2712,7 +2712,7 @@ input.input__quantity {
 }
 
 /* responsive */
-@media (min-width: 640px) and (max-width: 1199px) {
+@media (min-width: 640px) and (max-width: 1239px) {
   .page__home {
     background-image: url("../images/home-tablet.jpg");
     background-position: 50% 0;
@@ -3000,7 +3000,7 @@ input.input__quantity {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   #menu__modal {
     display: none !important;
   }
@@ -3370,10 +3370,10 @@ input.input__quantity {
   }
   .catalog__item {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -webkit-flex: 0 0 33.333333%;
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
   }
   .page__product .page__header,
   .page__catalog .page__header {
@@ -3840,6 +3840,16 @@ input.input__quantity {
   .status__wrap.status__disabled .status__content__navigation .button {
     display: inline-block;
     margin: 0 0 24px 24px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .catalog__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }
 

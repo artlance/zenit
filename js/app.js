@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //readmore
     let wordsNum = 9;
     let docWidth = document.body.clientWidth;
-    if (docWidth > 1199) {
+    if (docWidth > 1239) {
         wordsNum = 99999;
     }
     $readMoreJS.init({
@@ -182,6 +182,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let maskPhone = document.querySelectorAll('.input__tel');
     for (let i = 0; i < maskPhone.length; i++) {
         VMasker(maskPhone[i]).maskPattern('+9 (999) 999-99-99');
+    }
+
+    let maskNum = document.querySelectorAll('.input__num');
+    for (let i = 0; i < maskNum.length; i++) {
+        VMasker(maskNum[i]).maskPattern('99');
     }
 
     //countdown
