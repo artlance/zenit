@@ -2895,7 +2895,7 @@ input.input__quantity {
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
-    min-height: 0;
+    min-height: 48px;
   }
   .catalog__item__price {
     padding-top: 14px;
@@ -3495,7 +3495,8 @@ input.input__quantity {
     max-width: 100%;
     min-height: 0;
     color: #333333;
-    min-height: 48px;
+    min-height: 72px;
+    padding-bottom: 24px;
     -webkit-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     -o-transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3850,6 +3851,9 @@ input.input__quantity {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .catalog__item__title {
+    min-height: 48px;
   }
 }
 
