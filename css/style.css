@@ -2604,6 +2604,19 @@ input.input__quantity {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNi4yNSAzMiI+PHRpdGxlPjwvdGl0bGU+PHBhdGggZmlsbD0iIzMzMzMzMyIgZD0iTTM2IDExLjM5YTEgMSAwIDAgMC0uNzktLjM5SDMxTDI1IC41MWExIDEgMCAwIDAtMS4zNi0uMzggMSAxIDAgMCAwLS4zNyAxLjM2TDI4LjY2IDExSDcuNTlMMTMgMS40OWExIDEgMCAwIDAtLjM3LTEuMzYgMSAxIDAgMCAwLTEuMzYuMzhMNS4yOSAxMUgxYTEgMSAwIDAgMC0xIDEuMjNsNC41OCAxOWExIDEgMCAwIDAgMSAuNzdoMjQuNjdhMSAxIDAgMCAwIDEtLjc1bDUtMTlhMSAxIDAgMCAwLS4yNS0uODZ6TTI5LjQ4IDMwSDYuMzdsLTQuMS0xN0gzNHoiLz48L3N2Zz4=) !important;
 }
 
+.cart__icon__number {
+  color: #ffffff;
+  font-family: "FuturaDemiC", Helvetica, Arial, sans-serif;
+  padding-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  display: block;
+}
+
+.cart_icon__disabled .cart__icon__number {
+  color: #333;
+}
+
 .page__product .cart_icon {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNi4yNSAzMiI+PHRpdGxlPjwvdGl0bGU+PHBhdGggZmlsbD0iIzAwYWVlZiIgZD0iTTM2IDExLjM5YTEgMSAwIDAgMC0uNzktLjM5SDMxTDI1IC41MWExIDEgMCAwIDAtMS4zNi0uMzggMSAxIDAgMCAwLS4zNyAxLjM2TDI4LjY2IDExSDcuNTlMMTMgMS40OWExIDEgMCAwIDAtLjM3LTEuMzYgMSAxIDAgMCAwLTEuMzYuMzhMNS4yOSAxMUgxYTEgMSAwIDAgMC0xIDEuMjNsNC41OCAxOWExIDEgMCAwIDAgMSAuNzdoMjQuNjdhMSAxIDAgMCAwIDEtLjc1bDUtMTlhMSAxIDAgMCAwLS4yNS0uODZ6TTI5LjQ4IDMwSDYuMzdsLTQuMS0xN0gzNHoiLz48L3N2Zz4=);
 }
@@ -3058,12 +3071,20 @@ input.input__quantity {
   }
   .menu__link {
     font-size: 8.35vw;
-    line-height: 0.875;
+    line-height: 1;
   }
   .button__intro__navigation {
     max-width: none;
     width: auto;
     display: inline-block;
+  }
+  .cart__icon__number {
+    font-size: 13px;
+    padding-top: 12px;
+  }
+  .page__menu .cart__icon__number {
+    font-size: 10px;
+    padding-top: 10px;
   }
   .page__home .page__header {
     background: transparent;
@@ -3394,6 +3415,14 @@ input.input__quantity {
   .page__catalog .cart__toggle {
     width: 120px;
     height: 120px;
+  }
+  .page__product .cart__icon__number,
+  .page__catalog .cart__icon__number {
+    color: #009ee1;
+  }
+  .page__product .cart_icon__disabled .cart__icon__number,
+  .page__catalog .cart_icon__disabled .cart__icon__number {
+    color: #333;
   }
   .page__product .cart_icon,
   .page__catalog .cart_icon {

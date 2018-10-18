@@ -309,12 +309,22 @@
     }
     .menu__link {
         font-size: 8.35vw;
-        line-height: 0.875;
+        line-height: 1;
     }
     .button__intro__navigation {
         max-width: none;
         width: auto;
         display: inline-block;
+    }
+    .cart__icon__number {
+        font-size: 13px;
+        padding-top: 12px;
+    }
+    .page__menu {
+        .cart__icon__number {
+            font-size: 10px;
+            padding-top: 10px;
+        }
     }
     .page__home {
         .page__header {
@@ -623,6 +633,14 @@
         .cart__toggle {
             width: 120px;
             height: 120px;
+        }
+        .cart__icon__number {
+            color: $p;
+        }
+        .cart_icon__disabled {
+            .cart__icon__number {
+                color: #333;
+            }
         }
         .cart_icon {
             right: 41px;
